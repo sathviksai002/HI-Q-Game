@@ -1,0 +1,15 @@
+Algorithm pegSolataire{
+if there is only n=1 peg left,
+  if it is in center, return indicating we found a solution,
+  otherwise, we did not;
+if this board is flagged as congruent to one that has been determined to not lead a solution, return indicating we
+did not find one,
+otherwise, for each possible jump,
+  modify the board to account for the jump, and call the backtracking algorithm recursively using memotization techinique, where
+    if the algorithm indicates success, record the jump and return indicating we found a solution,
+    otherwise, reset the board to the state it was in prior to making a jump; and
+
+the loop will only finish if none of the possible jumps led to a solution, so flag that this board has been found not to 
+find a solution and return indicating we did not find one. 
+
+}
